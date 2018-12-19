@@ -17,6 +17,7 @@ const p5 = new D3.Client();
 
     console.log("oNNN1");
 p1.on('guildMemberAdd', member => {
+  var prefix = "1"
     const myID = "521341978659651596";
       let args = message.content.split(" ").slice(1).join(" ");
       if(message.content.startsWith(prefix + "ne")) {
@@ -66,6 +67,7 @@ p1.on('guildMemberAdd', member => {
 
     console.log("oNNN2");
 p2.on('guildMemberAdd', member => {
+  var prefix = "2"
   const myID = "521341978659651596";
   let args = message.content.split(" ").slice(1).join(" ");
   if(message.content.startsWith(prefix + "ne")) {
@@ -115,6 +117,7 @@ p2.on('guildMemberAdd', member => {
 
       console.log("oNNN3");
 p3.on('guildMemberAdd', member => {
+  var prefix = "3"
   const myID = "521341978659651596";
   let args = message.content.split(" ").slice(1).join(" ");
   if(message.content.startsWith(prefix + "ne")) {
@@ -162,6 +165,7 @@ p3.on('guildMemberAdd', member => {
 
   console.log("oNNN4");
   p4.on('guildMemberAdd', member => {
+    var prefix = "4"
     const myID = "521341978659651596";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "ne")) {
@@ -212,6 +216,7 @@ p3.on('guildMemberAdd', member => {
 
  console.log("oNNN5");
   p5.on('guildMemberAdd', member => {
+    var prefix = "5"
     const myID = "521341978659651596";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "ne")) {

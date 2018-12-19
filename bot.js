@@ -17,253 +17,138 @@ const p5 = new D3.Client();
 
     console.log("oNNN1");
 p1.on('guildMemberAdd', member => {
-    const myID = "521341978659651596";
-      let args = message.content.split(" ").slice(1).join(" ");
-      if(message.content.startsWith("1ne")) {
-              if(message.author.id !== myID) return;
-              if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-          client.user.setUsername(args);
-          message.channel.send(':white_check_mark: Done!').then(msg => {
-             msg.delete(5000);
-            message.delete(5000);
-          });
-      } else if(message.content.startsWith("2ply")) {
-                  if(message.author.id !== myID) return;
-              if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-          client.user.setGame(args);
-          message.channel.send(':white_check_mark: Done!').then(msg => {
-             msg.delete(5000);
-            message.delete(5000);
-          });
-      } else if(message.content.startsWith("2ls")) {
-                  if(message.author.id !== myID) return;
-              if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-          client.user.setActivity(args, {type:'LISTENING'});
-          message.channel.send(':white_check_mark: Done!').then(msg => {
-             msg.delete(5000);
-            message.delete(5000);
-          });
-      } else if(message.content.startsWith("2wt")) {
-                  if(message.author.id !== myID) return;
-              if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-          client.user.setActivity(args, {type:'WATCHING'});
-          message.channel.send(':white_check_mark: Done!').then(msg => {
-             msg.delete(5000);
-            message.delete(5000);
-          });
-      } else if(message.content.startsWith("2avt")) {
-                  if(message.author.id !== myID) return;
-          client.user.setAvatar(args);
-          message.channel.send(':white_check_mark: Done!').then(msg => {
-                  if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-             msg.delete(5000);
-            message.delete(5000);
-          });
-      }
+  const adminprefix = "1";
+  const devs = ['521341978659651596','ا5137878844494315721'];
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'بلاي')) {
+    client.user.setGame(argresult);
+      message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+  } else 
+    if (message.content.startsWith(adminprefix + 'نيم')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+  return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
+  } else
+    if (message.content.startsWith(adminprefix + 'افتار')) {
+  client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+        } else     
+  if (message.content.startsWith(adminprefix + 'ستريم')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
+      message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
+  }
   });
 
 
 
     console.log("oNNN2");
 p2.on('guildMemberAdd', member => {
-  const myID = "521341978659651596";
-  let args = message.content.split(" ").slice(1).join(" ");
-  if(message.content.startsWith("2ne")) {
-          if(message.author.id !== myID) return;
-          if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-      client.user.setUsername(args);
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-         msg.delete(5000);
-        message.delete(5000);
-      });
-  } else if(message.content.startsWith("2ply")) {
-              if(message.author.id !== myID) return;
-          if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-      client.user.setGame(args);
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-         msg.delete(5000);
-        message.delete(5000);
-      });
-  } else if(message.content.startsWith("2ls")) {
-              if(message.author.id !== myID) return;
-          if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-      client.user.setActivity(args, {type:'LISTENING'});
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-         msg.delete(5000);
-        message.delete(5000);
-      });
-  } else if(message.content.startsWith("2wt")) {
-              if(message.author.id !== myID) return;
-          if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-      client.user.setActivity(args, {type:'WATCHING'});
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-         msg.delete(5000);
-        message.delete(5000);
-      });
-  } else if(message.content.startsWith("2avt")) {
-              if(message.author.id !== myID) return;
-      client.user.setAvatar(args);
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-              if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-         msg.delete(5000);
-        message.delete(5000);
-      });
+  const adminprefix = "2";
+  const devs = ['521341978659651596','ا5137878844494315721'];
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'بلاي')) {
+    client.user.setGame(argresult);
+      message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+  } else 
+    if (message.content.startsWith(adminprefix + 'نيم')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+  return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
+  } else
+    if (message.content.startsWith(adminprefix + 'افتار')) {
+  client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+        } else     
+  if (message.content.startsWith(adminprefix + 'ستريم')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
+      message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
   }
-});
+  });
 
 
 
       console.log("oNNN3");
 p3.on('guildMemberAdd', member => {
-  var prefix = "3"
-  const myID = "521341978659651596";
-  let args = message.content.split(" ").slice(1).join(" ");
-  if(message.content.startsWith("3ne")) {
-          if(message.author.id !== myID) return;
-          if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-      client.user.setUsername(args);
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-         msg.delete(5000);
-        message.delete(5000);
-      });
-  } else if(message.content.startsWith("3ply")) {
-              if(message.author.id !== myID) return;
-          if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-      client.user.setGame(args);
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-         msg.delete(5000);
-        message.delete(5000);
-      });
-  } else if(message.content.startsWith("3ls")) {
-              if(message.author.id !== myID) return;
-          if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-      client.user.setActivity(args, {type:'LISTENING'});
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-         msg.delete(5000);
-        message.delete(5000);
-      });
-  } else if(message.content.startsWith("3wt")) {
-              if(message.author.id !== myID) return;
-          if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-      client.user.setActivity(args, {type:'WATCHING'});
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-         msg.delete(5000);
-        message.delete(5000);
-      });
-  } else if(message.content.startsWith("3avt")) {
-              if(message.author.id !== myID) return;
-      client.user.setAvatar(args);
-      message.channel.send(':white_check_mark: Done!').then(msg => {
-              if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-         msg.delete(5000);
-        message.delete(5000);
-      });
+  const adminprefix = "3";
+  const devs = ['521341978659651596','ا5137878844494315721'];
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'بلاي')) {
+    client.user.setGame(argresult);
+      message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+  } else 
+    if (message.content.startsWith(adminprefix + 'نيم')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+  return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
+  } else
+    if (message.content.startsWith(adminprefix + 'افتار')) {
+  client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+        } else     
+  if (message.content.startsWith(adminprefix + 'ستريم')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
+      message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
   }
-});
+  });
 
   console.log("oNNN4");
   p4.on('guildMemberAdd', member => {
-    var prefix = "4"
-    const myID = "521341978659651596";
-    let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith("4ne")) {
-            if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setUsername(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith("4ply")) {
-                if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith("4ls")) {
-                if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setActivity(args, {type:'LISTENING'});
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith("4wt")) {
-                if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setActivity(args, {type:'WATCHING'});
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith("4avt")) {
-                if(message.author.id !== myID) return;
-        client.user.setAvatar(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-           msg.delete(5000);
-          message.delete(5000);
-        });
+    const adminprefix = "4";
+    const devs = ['521341978659651596','ا5137878844494315721'];
+      var argresult = message.content.split(` `).slice(1).join(' ');
+        if (!devs.includes(message.author.id)) return;
+        
+    if (message.content.startsWith(adminprefix + 'بلاي')) {
+      client.user.setGame(argresult);
+        message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+    } else 
+      if (message.content.startsWith(adminprefix + 'نيم')) {
+    client.user.setUsername(argresult).then
+        message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+    } else
+      if (message.content.startsWith(adminprefix + 'افتار')) {
+    client.user.setAvatar(argresult);
+      message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+          } else     
+    if (message.content.startsWith(adminprefix + 'ستريم')) {
+      client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
+        message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
     }
-});
+    });
 
 
 
 
  console.log("oNNN5");
   p5.on('guildMemberAdd', member => {
-    var prefix = "5"
-    const myID = "521341978659651596";
-    let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith("5ne")) {
-            if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setUsername(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith("5ply")) {
-                if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith("5ls")) {
-                if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setActivity(args, {type:'LISTENING'});
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith("5wt")) {
-                if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setActivity(args, {type:'WATCHING'});
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-           msg.delete(5000);
-          message.delete(5000);
-        });
-    } else if(message.content.startsWith("5avt")) {
-                if(message.author.id !== myID) return;
-        client.user.setAvatar(args);
-        message.channel.send(':white_check_mark: Done!').then(msg => {
-                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-           msg.delete(5000);
-          message.delete(5000);
-        });
+    const adminprefix = "5";
+    const devs = ['521341978659651596','ا5137878844494315721'];
+      var argresult = message.content.split(` `).slice(1).join(' ');
+        if (!devs.includes(message.author.id)) return;
+        
+    if (message.content.startsWith(adminprefix + 'بلاي')) {
+      client.user.setGame(argresult);
+        message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
+    } else 
+      if (message.content.startsWith(adminprefix + 'نيم')) {
+    client.user.setUsername(argresult).then
+        message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
+    } else
+      if (message.content.startsWith(adminprefix + 'افتار')) {
+    client.user.setAvatar(argresult);
+      message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+          } else     
+    if (message.content.startsWith(adminprefix + 'ستريم')) {
+      client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
+        message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
     }
-});
- 
-
-
-
-
+    });
 
 
 

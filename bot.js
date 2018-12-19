@@ -17,10 +17,9 @@ const p5 = new D3.Client();
 
     console.log("oNNN1");
 p1.on('guildMemberAdd', member => {
-  var prefix = "1"
     const myID = "521341978659651596";
       let args = message.content.split(" ").slice(1).join(" ");
-      if(message.content.startsWith(prefix + "ne")) {
+      if(message.content.startsWith("1ne")) {
               if(message.author.id !== myID) return;
               if(!args) return message.reply('اكتب الحالة اللي تريدها.');
           client.user.setUsername(args);
@@ -28,7 +27,7 @@ p1.on('guildMemberAdd', member => {
              msg.delete(5000);
             message.delete(5000);
           });
-      } else if(message.content.startsWith(prefix + "ply")) {
+      } else if(message.content.startsWith("2ply")) {
                   if(message.author.id !== myID) return;
               if(!args) return message.reply('اكتب الحالة اللي تريدها.');
           client.user.setGame(args);
@@ -36,7 +35,7 @@ p1.on('guildMemberAdd', member => {
              msg.delete(5000);
             message.delete(5000);
           });
-      } else if(message.content.startsWith(prefix + "ls")) {
+      } else if(message.content.startsWith("2ls")) {
                   if(message.author.id !== myID) return;
               if(!args) return message.reply('اكتب الحالة اللي تريدها.');
           client.user.setActivity(args, {type:'LISTENING'});
@@ -44,7 +43,7 @@ p1.on('guildMemberAdd', member => {
              msg.delete(5000);
             message.delete(5000);
           });
-      } else if(message.content.startsWith(prefix + "wt")) {
+      } else if(message.content.startsWith("2wt")) {
                   if(message.author.id !== myID) return;
               if(!args) return message.reply('اكتب الحالة اللي تريدها.');
           client.user.setActivity(args, {type:'WATCHING'});
@@ -52,7 +51,7 @@ p1.on('guildMemberAdd', member => {
              msg.delete(5000);
             message.delete(5000);
           });
-      } else if(message.content.startsWith(prefix + "avt")) {
+      } else if(message.content.startsWith("2avt")) {
                   if(message.author.id !== myID) return;
           client.user.setAvatar(args);
           message.channel.send(':white_check_mark: Done!').then(msg => {
@@ -67,10 +66,9 @@ p1.on('guildMemberAdd', member => {
 
     console.log("oNNN2");
 p2.on('guildMemberAdd', member => {
-  var prefix = "2"
   const myID = "521341978659651596";
   let args = message.content.split(" ").slice(1).join(" ");
-  if(message.content.startsWith(prefix + "ne")) {
+  if(message.content.startsWith("2ne")) {
           if(message.author.id !== myID) return;
           if(!args) return message.reply('اكتب الحالة اللي تريدها.');
       client.user.setUsername(args);
@@ -78,7 +76,7 @@ p2.on('guildMemberAdd', member => {
          msg.delete(5000);
         message.delete(5000);
       });
-  } else if(message.content.startsWith(prefix + "ply")) {
+  } else if(message.content.startsWith("2ply")) {
               if(message.author.id !== myID) return;
           if(!args) return message.reply('اكتب الحالة اللي تريدها.');
       client.user.setGame(args);
@@ -86,7 +84,7 @@ p2.on('guildMemberAdd', member => {
          msg.delete(5000);
         message.delete(5000);
       });
-  } else if(message.content.startsWith(prefix + "ls")) {
+  } else if(message.content.startsWith("2ls")) {
               if(message.author.id !== myID) return;
           if(!args) return message.reply('اكتب الحالة اللي تريدها.');
       client.user.setActivity(args, {type:'LISTENING'});
@@ -94,7 +92,7 @@ p2.on('guildMemberAdd', member => {
          msg.delete(5000);
         message.delete(5000);
       });
-  } else if(message.content.startsWith(prefix + "wt")) {
+  } else if(message.content.startsWith("2wt")) {
               if(message.author.id !== myID) return;
           if(!args) return message.reply('اكتب الحالة اللي تريدها.');
       client.user.setActivity(args, {type:'WATCHING'});
@@ -102,7 +100,7 @@ p2.on('guildMemberAdd', member => {
          msg.delete(5000);
         message.delete(5000);
       });
-  } else if(message.content.startsWith(prefix + "avt")) {
+  } else if(message.content.startsWith("2avt")) {
               if(message.author.id !== myID) return;
       client.user.setAvatar(args);
       message.channel.send(':white_check_mark: Done!').then(msg => {
@@ -120,7 +118,7 @@ p3.on('guildMemberAdd', member => {
   var prefix = "3"
   const myID = "521341978659651596";
   let args = message.content.split(" ").slice(1).join(" ");
-  if(message.content.startsWith(prefix + "ne")) {
+  if(message.content.startsWith("3ne")) {
           if(message.author.id !== myID) return;
           if(!args) return message.reply('اكتب الحالة اللي تريدها.');
       client.user.setUsername(args);
@@ -128,7 +126,7 @@ p3.on('guildMemberAdd', member => {
          msg.delete(5000);
         message.delete(5000);
       });
-  } else if(message.content.startsWith(prefix + "ply")) {
+  } else if(message.content.startsWith("3ply")) {
               if(message.author.id !== myID) return;
           if(!args) return message.reply('اكتب الحالة اللي تريدها.');
       client.user.setGame(args);
@@ -136,7 +134,7 @@ p3.on('guildMemberAdd', member => {
          msg.delete(5000);
         message.delete(5000);
       });
-  } else if(message.content.startsWith(prefix + "ls")) {
+  } else if(message.content.startsWith("3ls")) {
               if(message.author.id !== myID) return;
           if(!args) return message.reply('اكتب الحالة اللي تريدها.');
       client.user.setActivity(args, {type:'LISTENING'});
@@ -144,7 +142,7 @@ p3.on('guildMemberAdd', member => {
          msg.delete(5000);
         message.delete(5000);
       });
-  } else if(message.content.startsWith(prefix + "wt")) {
+  } else if(message.content.startsWith("3wt")) {
               if(message.author.id !== myID) return;
           if(!args) return message.reply('اكتب الحالة اللي تريدها.');
       client.user.setActivity(args, {type:'WATCHING'});
@@ -152,7 +150,7 @@ p3.on('guildMemberAdd', member => {
          msg.delete(5000);
         message.delete(5000);
       });
-  } else if(message.content.startsWith(prefix + "avt")) {
+  } else if(message.content.startsWith("3avt")) {
               if(message.author.id !== myID) return;
       client.user.setAvatar(args);
       message.channel.send(':white_check_mark: Done!').then(msg => {
@@ -168,7 +166,7 @@ p3.on('guildMemberAdd', member => {
     var prefix = "4"
     const myID = "521341978659651596";
     let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(prefix + "ne")) {
+    if(message.content.startsWith("4ne")) {
             if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setUsername(args);
@@ -176,7 +174,7 @@ p3.on('guildMemberAdd', member => {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "ply")) {
+    } else if(message.content.startsWith("4ply")) {
                 if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setGame(args);
@@ -184,7 +182,7 @@ p3.on('guildMemberAdd', member => {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "ls")) {
+    } else if(message.content.startsWith("4ls")) {
                 if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'LISTENING'});
@@ -192,7 +190,7 @@ p3.on('guildMemberAdd', member => {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "wt")) {
+    } else if(message.content.startsWith("4wt")) {
                 if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'WATCHING'});
@@ -200,7 +198,7 @@ p3.on('guildMemberAdd', member => {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "avt")) {
+    } else if(message.content.startsWith("4avt")) {
                 if(message.author.id !== myID) return;
         client.user.setAvatar(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
@@ -219,7 +217,7 @@ p3.on('guildMemberAdd', member => {
     var prefix = "5"
     const myID = "521341978659651596";
     let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(prefix + "ne")) {
+    if(message.content.startsWith("5ne")) {
             if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setUsername(args);
@@ -227,7 +225,7 @@ p3.on('guildMemberAdd', member => {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "ply")) {
+    } else if(message.content.startsWith("5ply")) {
                 if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setGame(args);
@@ -235,7 +233,7 @@ p3.on('guildMemberAdd', member => {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "ls")) {
+    } else if(message.content.startsWith("5ls")) {
                 if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'LISTENING'});
@@ -243,7 +241,7 @@ p3.on('guildMemberAdd', member => {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "wt")) {
+    } else if(message.content.startsWith("5wt")) {
                 if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'WATCHING'});
@@ -251,7 +249,7 @@ p3.on('guildMemberAdd', member => {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "avt")) {
+    } else if(message.content.startsWith("5avt")) {
                 if(message.author.id !== myID) return;
         client.user.setAvatar(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
